@@ -8,24 +8,25 @@
     })(window,document,'script','dataLayer','GTM-T3ZFCTN8');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🌟 EventPlanera AB - Skapa Ditt Perfekta Event</title>
+    <title>🌸 EventPlanera AB - Skapa Ditt Perfekta Event</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Lato:wght@400;700&display=swap" rel="stylesheet">
     
     <meta name="description" content="EventPlanera AB – Vi skapar oförglömliga bröllop, företagskonferenser och privata fester. Stressfri eventplanering.">
 
     <style>
-        /* 1. TYPOGRAFI & FÄRGER (Modernisering) */
+        /* 1. TYPOGRAFI & FÄRGER (Modern Pastellpalett) */
         :root {
-            --primary-color: #1A53A0; /* Djup Kungsblå */
-            --accent-color: #FFD700; /* Guld/Gul */
-            --background-light: #f4f4f4;
-            --text-dark: #1a1a1a;
+            --primary-color: #6a994e; /* Mjuk Mintgrön (Lugnande) */
+            --accent-color: #FFB347; /* Mjuk Persika/Orange (CTA) */
+            --background-light: #F9F9F9; /* Nästan Vit */
+            --text-dark: #333333; /* Mörkgrå för läsbarhet */
             --text-light: #ffffff;
+            --secondary-bg: #EAEAEA; /* Ljusgrå för kortbakgrund */
         }
 
         body {
-            font-family: 'Lato', sans-serif; /* Modern brödtext */
+            font-family: 'Lato', sans-serif;
             margin: 0;
             padding: 0;
             background-color: var(--background-light);
@@ -34,13 +35,13 @@
         }
 
         h1, h2, h3 {
-            font-family: 'Poppins', sans-serif; /* Tydliga rubriker */
+            font-family: 'Poppins', sans-serif;
             color: var(--text-dark);
         }
 
         /* 2. LAYOUT & CONTAINER */
         .container {
-            width: 90%; /* Lite bredare än 80% */
+            width: 90%;
             max-width: 1200px;
             margin: auto;
             overflow: hidden;
@@ -62,7 +63,7 @@
         }
 
         nav {
-            background-color: var(--text-dark);
+            background-color: var(--text-dark); /* Behåller mörkt för kontrast och läsbarhet */
             padding: 0;
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
@@ -71,7 +72,7 @@
             list-style: none;
             padding: 0;
             text-align: center;
-            display: flex; /* Använd Flexbox för centrering */
+            display: flex;
             justify-content: center;
             margin: 0;
         }
@@ -89,24 +90,25 @@
         }
 
         nav ul li a:hover {
-            color: var(--accent-color); /* Liten hover-effekt */
+            color: var(--accent-color);
         }
 
-        /* 4. HERO SECTION (Med plats för bakgrundsbild) */
+        /* 4. HERO SECTION (Pastell med bild) */
         #hero {
-            /* Exempel på bakgrundsbild. Byt ut 'https://picsum.photos/1200/500' mot din egen eventbild. */
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://picsum.photos/1200/500') no-repeat center center/cover;
-            color: var(--text-light);
-            padding: 100px 40px; /* Större yta */
+            /* Pastellpalett med bild. Byt ut URL mot egen bild. */
+            background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url('https://picsum.photos/1200/500?random=1') no-repeat center center/cover;
+            color: var(--text-dark); /* Mörk text mot ljusare bild */
+            background-color: #f7fff7; /* Mycket ljus bakgrundsfärg */
+            padding: 100px 40px;
             margin-bottom: 30px;
             text-align: center;
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
 
         #hero h2 {
             font-size: 3em;
-            color: var(--text-light);
+            color: var(--primary-color); /* Rubrik i primärfärg */
             margin-top: 0;
         }
 
@@ -121,7 +123,7 @@
             color: var(--text-dark) !important;
             padding: 15px 30px;
             text-decoration: none;
-            border-radius: 50px; /* Pill-form */
+            border-radius: 50px;
             font-weight: bold;
             display: inline-block;
             margin-top: 15px;
@@ -132,7 +134,7 @@
         }
 
         .cta-button:hover {
-            background-color: #f7b700; /* Mörkare guld vid hovring */
+            background-color: #ff9933; /* Mörkare persika vid hovring */
             transform: scale(1.05);
         }
 
@@ -146,19 +148,20 @@
         }
 
         .service-grid {
-            display: flex; /* Använd Flexbox för att lägga kort bredvid varandra */
+            display: flex;
             gap: 20px;
-            flex-wrap: wrap; /* Går ner på ny rad vid liten skärm */
+            flex-wrap: wrap;
         }
 
         .service-card {
             flex: 1;
             min-width: 250px;
-            padding: 20px;
-            background-color: var(--background-light);
-            border-radius: 8px;
-            border-bottom: 4px solid var(--primary-color);
+            padding: 25px;
+            background-color: var(--secondary-bg); /* Ljusgrå bakgrund på kort */
+            border-radius: 12px;
+            border-bottom: 5px solid var(--primary-color); /* Stark accentlinje */
             transition: transform 0.3s;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
 
         .service-card:hover {
@@ -173,9 +176,13 @@
             width: 100%;
             padding: 12px;
             margin-bottom: 15px;
-            border: 1px solid #ccc;
+            border: 1px solid #d4d4d4; /* Mjukare kantlinje */
             border-radius: 5px;
             box-sizing: border-box;
+        }
+
+        .contact-form button[type="submit"] {
+            width: 100%;
         }
 
         .contact-info {
@@ -186,7 +193,7 @@
 
         /* 8. FOOTER */
         footer {
-            background-color: var(--text-dark);
+            background-color: var(--primary-color);
             color: var(--text-light);
             text-align: center;
             padding: 15px 0;
@@ -207,7 +214,6 @@
                 font-size: 2em;
             }
             
-            /* Tjänstekort staplas på mobil */
             .service-grid {
                 flex-direction: column;
             }
@@ -253,7 +259,7 @@
             <h2>Vi gör din vision till verklighet!</h2>
             <p class="tagline">Oavsett om det är ett bröllop, en företagskonferens eller en födelsedagsfest – vi hanterar detaljerna så att du kan njuta av ögonblicket.</p>
             
-            <a href="#kontakt" id="cta-button" class="cta-button">Begär offert idag!</a>
+            <button id="cta-button" class="cta-button">Begär offert idag!</button>
         </section>
 
         <section id="tjanster" class="section">
