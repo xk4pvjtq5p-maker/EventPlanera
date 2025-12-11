@@ -6,250 +6,447 @@
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-T3ZFCTN8');</script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🥂 EventPlanera AB - Lyxig Eventplanering</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    
+
+    <!-- Varma, eleganta typsnitt -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+
     <meta name="description" content="EventPlanera AB – Lyxig eventplanering för bröllop, gala och företagsevent. Elegans, precision och exklusivitet.">
 
     <style>
-        /* 1. TYPOGRAFI & FÄRGER (Lyxpalett) */
+        /* 1. FÄRGER & BAS-STIL (Boho / ladugård / bröllop) */
         :root {
-            --primary-color: #6A0505; /* Djupt Vinröd/Bordeaux */
-            --accent-color: #D4AF37; /* Lyxigt Guld */
-            --secondary-color: #2F0505; /* Nästan Svart/Mycket Mörk Vinröd */
-            --background-light: #FDFDFD; /* Krämvit/Nästan Vit */
-            --text-dark: #2F0505; 
-            --text-light: #ffffff;
-            --secondary-bg: #FFFFFF; /* Rent Vitt */
+            --bg-page: #f7f1ea;           /* Ljus varm bakgrund */
+            --bg-card: #ffffff;           /* Kort / sektioner */
+            --primary: #c27a5c;           /* Terracotta */
+            --primary-dark: #a26147;
+            --accent: #e3c4aa;            /* Ljus peach/beige */
+            --text-main: #3e3128;         /* Mörk varm brun */
+            --text-muted: #8b7563;
+            --border-soft: #efe0d3;
+            --shadow-soft: 0 18px 40px rgba(57, 40, 28, 0.12);
+            --radius-card: 24px;
+        }
+
+        * {
+            box-sizing: border-box;
         }
 
         body {
-            font-family: 'Lato', sans-serif;
+            font-family: 'Nunito', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--background-light);
-            color: var(--text-dark);
-            line-height: 1.7; /* Mer luft i texten */
+            background: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.7;
         }
 
         h1, h2, h3 {
-            font-family: 'Playfair Display', serif; /* Exklusiv serif-font för rubriker */
-            color: var(--text-dark);
+            font-family: 'Playfair Display', serif;
+            color: var(--text-main);
+            margin-top: 0;
         }
 
-        /* 2. LAYOUT & CONTAINER */
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
         .container {
-            width: 90%;
+            width: 92%;
             max-width: 1200px;
-            margin: auto;
-            overflow: hidden;
-            padding: 30px 0; /* Mer padding för luftigare design */
+            margin: 0 auto;
         }
 
-        /* 3. HEADER & NAVIGATION */
+        /* 2. HEADER & NAV */
         header {
-            background-color: var(--primary-color);
-            color: var(--text-light);
-            padding: 25px 0;
-            text-align: center;
+            background: linear-gradient(to bottom, #fdf7f1 0%, rgba(253,247,241,0.75) 65%, transparent 100%);
+            padding: 18px 0 8px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            backdrop-filter: blur(16px);
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 3em;
-            color: var(--text-light);
-            letter-spacing: 2px; /* Ger en lyxig känsla */
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 32px;
         }
 
-        nav {
-            background-color: var(--secondary-color); 
-            padding: 0;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        .logo {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .logo h1 {
+            font-size: 1.6rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .logo span {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: var(--text-muted);
         }
 
         nav ul {
             list-style: none;
-            padding: 0;
-            text-align: center;
-            display: flex;
-            justify-content: center;
             margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            gap: 24px;
         }
 
-        nav ul li {
-            margin: 0 25px;
-        }
-
-        nav ul li a {
-            color: var(--text-light);
+        nav a {
             text-decoration: none;
-            padding: 15px 0;
-            display: inline-block;
-            transition: color 0.3s;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            color: var(--text-muted);
+            padding-bottom: 4px;
+            border-bottom: 1px solid transparent;
+            transition: color 0.25s ease, border-color 0.25s ease;
         }
 
-        nav ul li a:hover {
-            color: var(--accent-color); /* Guld vid hovring */
+        nav a:hover {
+            color: var(--primary);
+            border-color: var(--primary);
         }
 
-        /* 4. HERO SECTION (Lyxig bild) */
+        /* 3. HERO – tvåkolumnskort med bild */
+        main {
+            padding: 32px 0 64px;
+        }
+
         #hero {
-            /* Högupplöst bild på en lyxig bankett/gala. Byt ut URL mot din egen bild. */
-            background: linear-gradient(rgba(47, 5, 5, 0.5), rgba(47, 5, 5, 0.5)), url('https://picsum.photos/1200/500?random=3') no-repeat center center/cover;
-            color: var(--text-light); 
-            padding: 120px 40px; /* Mycket luft */
-            margin-bottom: 40px;
-            text-align: center;
-            border-radius: 10px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            background: var(--bg-card);
+            border-radius: var(--radius-card);
+            box-shadow: var(--shadow-soft);
+            display: grid;
+            grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+            gap: 40px;
+            padding: 40px;
+            margin-bottom: 56px;
+            align-items: stretch;
         }
-        /*  */
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 18px;
+        }
+
+        .hero-eyebrow {
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            font-size: 0.78rem;
+            color: var(--text-muted);
+        }
 
         #hero h2 {
-            font-size: 3.5em;
-            color: var(--accent-color); /* Guld rubrik */
-            margin-top: 0;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+            font-size: 2.6rem;
+            line-height: 1.2;
         }
 
         #hero .tagline {
-            font-size: 1.5em;
-            margin-bottom: 40px;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+            font-size: 1.05rem;
+            color: var(--text-muted);
         }
 
-        /* 5. CTA KNAPP STYLING */
+        .hero-subtext {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 18px;
+            align-items: center;
+            margin-top: 8px;
+        }
+
         .cta-button {
-            background-color: var(--accent-color);
-            color: var(--text-dark) !important;
-            padding: 18px 35px;
-            text-decoration: none;
-            border-radius: 4px; /* Skarpare kanter */
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 20px;
-            font-family: 'Lato', sans-serif;
-            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            background-color: var(--primary);
+            color: #fff;
             border: none;
+            padding: 14px 28px;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
             cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 0 10px 25px rgba(194, 122, 92, 0.35);
+            transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
         }
 
         .cta-button:hover {
-            background-color: #B89635; /* Mörkare guld vid hovring */
-            transform: translateY(-2px);
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+            background-color: var(--primary-dark);
+            transform: translateY(-1px);
+            box-shadow: 0 16px 32px rgba(194,122,92,0.4);
         }
 
-        /* 6. SEKTIONER OCH KORT */
+        .secondary-link {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .secondary-link span {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .hero-image {
+            position: relative;
+            border-radius: 22px;
+            overflow: hidden;
+            background:
+                linear-gradient(135deg, rgba(0,0,0,0.18), rgba(0,0,0,0.05)),
+                url("https://picsum.photos/900/700?random=32") center center/cover no-repeat;
+            min-height: 260px;
+        }
+
+        .hero-image::after {
+            content: "";
+            position: absolute;
+            inset: 18px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.6);
+            box-shadow: inset 0 0 0 1px rgba(255,255,255,0.4);
+        }
+
+        /* 4. SEKTIONER & KORT (Pinterest-känsla) */
+
         .section {
-            background: var(--secondary-bg);
-            padding: 40px; /* Mer luft */
             margin-bottom: 40px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.08); /* Subtil skugga */
+            border-radius: var(--radius-card);
+            background: var(--bg-card);
+            padding: 32px 32px 36px;
+            box-shadow: var(--shadow-soft);
         }
 
+        .section-header {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .section-eyebrow {
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+        }
+
+        .section-header h2 {
+            font-size: 1.9rem;
+            margin-bottom: 6px;
+        }
+
+        .section-header p {
+            margin: 0;
+            font-size: 0.98rem;
+            color: var(--text-muted);
+        }
+
+        /* Tjänstekort */
         .service-grid {
-            display: flex;
-            gap: 30px; /* Ökat gap */
-            flex-wrap: wrap;
-            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 24px;
         }
 
         .service-card {
-            flex: 1;
-            min-width: 300px;
-            padding: 30px;
-            background-color: var(--background-light); 
-            border-radius: 8px;
-            border: 1px solid #E0E0E0; /* Mycket tunn, ren kant */
-            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 20px;
+            background: #fffdfb;
+            overflow: hidden;
+            border: 1px solid var(--border-soft);
+            box-shadow: 0 10px 25px rgba(57,40,28,0.08);
+            transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 36px rgba(57,40,28,0.15);
+            border-color: rgba(194,122,92,0.55);
+        }
+
+        .service-media {
+            height: 180px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Exempelbilder – byt gärna till egna riktiga bilder */
+        .service-media.bröllop {
+            background-image: url("https://picsum.photos/800/600?random=12");
+        }
+        .service-media.företag {
+            background-image: url("https://picsum.photos/800/600?random=18");
+        }
+        .service-media.catering {
+            background-image: url("https://picsum.photos/800/600?random=24");
+        }
+
+        .service-body {
+            padding: 18px 20px 20px;
         }
 
         .service-card h3 {
-             color: var(--primary-color);
-             border-bottom: 2px solid var(--accent-color); /* Guldlinje under rubrik */
-             padding-bottom: 10px;
-             margin-top: 0;
-             font-size: 1.5em;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            font-size: 1.25rem;
+            margin-bottom: 8px;
         }
 
-        /* 7. KONTAKTFORMULÄR STYLING */
+        .service-card p {
+            font-size: 0.95rem;
+            margin: 0 0 4px;
+        }
+
+        .image-note {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        /* 5. OM OSS */
+        #omoss p {
+            max-width: 60ch;
+            margin: 0 auto;
+            font-size: 0.98rem;
+            text-align: center;
+        }
+
+        /* 6. KONTAKTFORMULÄR */
+        .contact-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+            gap: 32px;
+            align-items: start;
+        }
+
         .contact-form input[type="text"],
         .contact-form input[type="email"],
         .contact-form textarea {
             width: 100%;
-            padding: 15px;
-            margin-bottom: 20px;
-            border: 1px solid #E5E5E5; 
-            border-radius: 4px;
-            box-sizing: border-box;
-            background-color: var(--secondary-bg);
+            padding: 12px 14px;
+            margin-bottom: 14px;
+            border-radius: 12px;
+            border: 1px solid var(--border-soft);
+            background: #fdf7f1;
+            font-family: inherit;
+            font-size: 0.95rem;
+            resize: vertical;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: #fffaf5;
+            box-shadow: 0 0 0 1px rgba(194,122,92,0.4);
         }
 
         .contact-form button[type="submit"] {
             width: 100%;
+            margin-top: 4px;
         }
 
         .contact-info {
-            margin-top: 30px;
-            font-style: italic;
-            text-align: center;
-            font-size: 1.1em;
+            font-size: 0.95rem;
+            color: var(--text-muted);
         }
 
-        /* 8. FOOTER */
+        .contact-info strong {
+            color: var(--text-main);
+        }
+
+        .contact-card {
+            padding: 18px 20px;
+            background: #fffaf5;
+            border-radius: 18px;
+            border: 1px dashed var(--accent);
+            font-size: 0.92rem;
+        }
+
+        /* 7. FOOTER */
         footer {
-            background-color: var(--secondary-color);
-            color: var(--text-light);
             text-align: center;
-            padding: 20px 0;
-            margin-top: 40px;
+            padding: 24px 0 28px;
+            font-size: 0.82rem;
+            color: var(--text-muted);
         }
 
-        /* 9. RESPONSIV DESIGN (MOBILANPASSNING) */
-        @media (max-width: 768px) {
-            .container {
-                width: 95%; 
-            }
-            
+        footer span {
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        /* 8. RESPONSIV DESIGN */
+        @media (max-width: 900px) {
             #hero {
-                padding: 80px 20px;
-            }
-            
-            #hero h2 {
-                font-size: 2.5em;
-            }
-            
-            .service-grid {
-                flex-direction: column;
-                gap: 20px;
+                grid-template-columns: 1fr;
+                padding: 26px 22px;
             }
 
-            .service-card {
-                min-width: unset;
+            .hero-image {
+                order: -1;
+                min-height: 220px;
+            }
+
+            .header-inner {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
             }
 
             nav ul {
-                flex-direction: column;
-                padding-bottom: 10px;
+                gap: 14px;
+                flex-wrap: wrap;
             }
-            
-            nav ul li {
-                margin: 5px 0;
+
+            .service-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
             }
-            
-            nav ul li a {
-                padding: 5px 0;
+
+            .contact-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                width: 92%;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #hero h2 {
+                font-size: 2rem;
+            }
+
+            .section {
+                padding: 24px 20px 28px;
             }
         }
     </style>
@@ -257,79 +454,129 @@
 <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T3ZFCTN8"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
     <header>
-        <div class="container">
-            <h1>EventPlanera AB</h1>
-            <p>Din partner för oförglömliga tillfällen</p>
+        <div class="container header-inner">
+            <div class="logo">
+                <h1>EventPlanera AB</h1>
+                <span>Bröllop • Event • Företag</span>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="#tjanster">Tjänster</a></li>
+                    <li><a href="#omoss">Om oss</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <nav>
-        <div class="container">
-            <ul>
-                <li><a href="#tjanster">Våra Tjänster</a></li>
-                <li><a href="#omoss">Om Oss</a></li>
-                <li><a href="#kontakt">Kontakta Oss</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="container">
-        
+    <main class="container">
+        <!-- HERO -->
         <section id="hero">
-            <h2>Vi gör din vision till verklighet!</h2>
-            <p class="tagline">Elegans, precision och exklusivitet. Vi hanterar detaljerna så att du kan njuta av ögonblicket.</p>
-            
-            <button id="cta-button" class="cta-button">Begär offert idag!</button>
+            <div class="hero-content">
+                <p class="hero-eyebrow">Bröllop • Galor • Företagsevent</p>
+                <h2>Vi gör din vision till verklighet.</h2>
+                <p class="tagline">
+                    Elegans, precision och exklusivitet – från första idé till sista detaljerade servettvikning.
+                    Du njuter av ögonblicket, vi tar hand om resten.
+                </p>
+
+                <div class="hero-actions">
+                    <button id="cta-button" class="cta-button">Begär offert idag</button>
+                    <p class="secondary-link">Eller <span>bokar ett kostnadsfritt kort samtal</span></p>
+                </div>
+
+                <p class="hero-subtext">Bas i Stockholmsområdet – vi planerar event i hela Sverige.</p>
+            </div>
+
+            <div class="hero-image" aria-hidden="true"></div>
         </section>
 
+        <!-- TJÄNSTER -->
         <section id="tjanster" class="section">
-            <h2>Våra Exklusiva Tjänster ✨</h2>
+            <div class="section-header">
+                <div class="section-eyebrow">Våra tjänster</div>
+                <h2>Exklusiv eventplanering från idé till genomförande</h2>
+                <p>Vi anpassar varje upplägg efter ert varumärke, er stil och era gäster.</p>
+            </div>
+
             <div class="service-grid">
-                <div class="service-card">
-                    <h3>Bröllopsplanering i Världsklass 🥂</h3>
-                    <p>Skapa ert drömbröllop utan stress, med fokus på lyxiga detaljer och unika upplevelser. Inkluderar design och leverantörshantering.</p>
-                    <p class="image-note"> [Föreslagen bild: Lyxig brudbukett och guldporslin] </p>
-                </div>
-                <div class="service-card">
-                    <h3>Gala, Konferenser och Företagsevent 🌐</h3>
-                    <p>Från storslagna galor till exklusiva styrelsemöten – vi garanterar ett professionellt event som förstärker ert varumärke med elegans.</p>
-                    <p class="image-note"> [Föreslagen bild: Välbelyst konferensbord med vattenflaskor och pennor] </p>
-                </div>
-                <div class="service-card">
-                    <h3>Gourmet Catering och Banketter 🍽️</h3>
-                    <p>Oavsett om det är en privat middag eller en bankett för 500 gäster, erbjuder vi skräddarsydda gourmetmenyer och service i toppklass.</p>
-                    <p class="image-note"> [Föreslagen bild: Närbild på elegant matuppläggning (catering)] </p>
-                </div>
+                <article class="service-card">
+                    <div class="service-media bröllop"></div>
+                    <div class="service-body">
+                        <h3>Bröllopsplanering i världsklass</h3>
+                        <p>Skapa ert drömbröllop utan stress, med fokus på lyxiga detaljer och unika upplevelser. Inkluderar design, tidsplan och leverantörshantering.</p>
+                        <p class="image-note">Förslag på bild: brudbukett, dukning och mjuk belysning.</p>
+                    </div>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-media företag"></div>
+                    <div class="service-body">
+                        <h3>Gala, konferenser & företagsevent</h3>
+                        <p>Från storslagna galor till exklusiva styrelsemöten – vi skapar professionella event som förstärker ert varumärke med elegans.</p>
+                        <p class="image-note">Förslag på bild: upplyst lada/venue med dukade bord och ljusslingor.</p>
+                    </div>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-media catering"></div>
+                    <div class="service-body">
+                        <h3>Gourmet catering & banketter</h3>
+                        <p>Oavsett om det är en privat middag eller bankett för 500 gäster erbjuder vi skräddarsydda menyer och service i toppklass.</p>
+                        <p class="image-note">Förslag på bild: närbild på elegant serverad varmrätt eller dessertbord.</p>
+                    </div>
+                </article>
             </div>
         </section>
 
+        <!-- OM OSS -->
         <section id="omoss" class="section">
-            <h2>Om Oss 💖</h2>
-            <p>EventPlanera AB grundades av passionerade eventkoordinatorer med målet att leverera stressfria och framgångsrika event. Vårt fokus ligger på **kreativitet, precision och kompromisslös kundnöjdhet**.</p>
+            <div class="section-header">
+                <div class="section-eyebrow">Om oss</div>
+                <h2>Personlig service, tydlig struktur och känsla för detaljer</h2>
+            </div>
+            <p>
+                EventPlanera AB grundades av passionerade eventkoordinatorer med målet att leverera stressfria,
+                genomtänkta och minnesvärda upplevelser. Vårt fokus ligger på kreativitet, tydlig projektledning
+                och kompromisslös kundnöjdhet – oavsett om det gäller ett intimt bröllop eller ett stort företagsevent.
+            </p>
         </section>
 
+        <!-- KONTAKT -->
         <section id="kontakt" class="section">
-            <h2>Kontakta Oss 💌</h2>
-            <p>Redo att börja planera? Skicka en förfrågan idag. Vi svarar inom 24 timmar.</p>
-            
-            <form action="#" method="POST" class="contact-form">
-                <input type="text" placeholder="Ditt Namn" required>
-                <input type="email" placeholder="Din E-post" required>
-                <textarea placeholder="Berätta om ditt event (Datum, typ, antal gäster)..." rows="6" required></textarea>
-                <button type="submit" class="cta-button">Skicka förfrågan</button>
-            </form>
+            <div class="section-header">
+                <div class="section-eyebrow">Kontakt</div>
+                <h2>Berätta om ert kommande event</h2>
+                <p>Fyll i formuläret så återkommer vi inom 24 timmar med nästa steg.</p>
+            </div>
 
-            <p class="contact-info">E-post: info@eventplanera.se | Telefon: 070-123 45 67</p>
+            <div class="contact-layout">
+                <form action="#" method="POST" class="contact-form">
+                    <input type="text" placeholder="Ditt namn" required>
+                    <input type="email" placeholder="Din e-post" required>
+                    <textarea placeholder="Berätta kort om ditt event (datum, typ, antal gäster)..." rows="6" required></textarea>
+                    <button type="submit" class="cta-button">Skicka förfrågan</button>
+                </form>
+
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <p><strong>E-post:</strong> info@eventplanera.se<br>
+                           <strong>Telefon:</strong> 070-123 45 67</p>
+                        <p>Vi hjälper gärna till med bröllop, företagsevent, jubileum och privatfester i hela landet.</p>
+                    </div>
+                </div>
+            </div>
         </section>
-
-    </div>
+    </main>
 
     <footer>
-        <p>&copy; 2025 EventPlanera AB. Alla rättigheter reserverade.</p>
+        <span>&copy; 2025 EventPlanera AB</span><br>
+        Alla rättigheter reserverade.
     </footer>
-    
-    <script src="js/script.js"></script>
 
+    <script src="js/script.js"></script>
 </body>
 </html>
