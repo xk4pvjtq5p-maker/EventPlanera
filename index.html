@@ -1,144 +1,60 @@
 <!DOCTYPE html>
 <html lang="sv">
-<head><!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-T3ZFCTN8');</script>
-<!-- End Google Tag Manager -->
+<head>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-T3ZFCTN8');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🌟 EventPlanera AB - Skapa Ditt Perfekta Event</title>
-    <style>
-        /* CSS-kod för grundläggande stil */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-
-        header {
-            background-color: #007bff; /* Eventplanerarens primära färg: Blå */
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            text-align: center;
-            background-color: #333;
-        }
-
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 0;
-            display: inline-block;
-        }
-
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-            padding: 20px 0;
-        }
-
-        #hero {
-            background: #fff;
-            padding: 40px;
-            margin-bottom: 20px;
-            text-align: center;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-        .section {
-            background: #fff;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
-        }
-    </style>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/styles.css"> 
+    
+    <meta name="description" content="EventPlanera AB – Vi skapar oförglömliga bröllop, företagskonferenser och privata fester. Stressfri eventplanering.">
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T3ZFCTN8"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T3ZFCTN8"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <header>
-        <h1>EventPlanera AB</h1>
-        <p>Din partner för oförglömliga tillfällen</p>
+        <div class="container">
+            <h1>EventPlanera AB</h1>
+            <p>Din partner för oförglömliga tillfällen</p>
+        </div>
     </header>
 
     <nav>
-        <ul>
-            <li><a href="#tjanster">Våra Tjänster</a></li>
-            <li><a href="#omoss">Om Oss</a></li>
-            <li><a href="#kontakt">Kontakta Oss</a></li>
-        </ul>
+        <div class="container">
+            <ul>
+                <li><a href="#tjanster">Våra Tjänster</a></li>
+                <li><a href="#omoss">Om Oss</a></li>
+                <li><a href="#kontakt">Kontakta Oss</a></li>
+            </ul>
+        </div>
     </nav>
 
     <div class="container">
         
         <section id="hero">
             <h2>Vi gör din vision till verklighet!</h2>
-            <p>Oavsett om det är ett bröllop, en företagskonferens eller en födelsedagsfest – vi hanterar detaljerna så att du kan njuta av ögonblicket.</p>
-            <a href="#kontakt" style="background-color: #ffc107; color: #333; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; margin-top: 15px;">Begär offert idag!</a>
+            <p class="tagline">Oavsett om det är ett bröllop, en företagskonferens eller en födelsedagsfest – vi hanterar detaljerna så att du kan njuta av ögonblicket.</p>
+            
+            <a href="#kontakt" id="cta-button" class="cta-button">Begär offert idag!</a>
         </section>
 
         <section id="tjanster" class="section">
             <h2>Våra Tjänster 🗓️</h2>
-            <p>Vi erbjuder skräddarsydda lösningar för alla typer av event:</p>
-            <ul>
-                <li>Bröllopsplanering</li>
-                <li>Företagsevent och konferenser</li>
-                <li>Privata fester (födelsedagar, jubileum)</li>
-                <li>Leverantörshantering och logistik</li>
-            </ul>
-        </section>
-
-        <section id="omoss" class="section">
-            <h2>Om Oss 🤝</h2>
-            <p>EventPlanera AB grundades av passionerade eventkoordinatorer med målet att leverera stressfria och framgångsrika event. Vårt fokus ligger på kreativitet, precision och kundnöjdhet.</p>
-        </section>
-
-        <section id="kontakt" class="section">
-            <h2>Kontakta Oss 📧</h2>
-            <p>Redo att börja planera? Skicka ett mail till oss!</p>
-            <p>E-post: info@eventplanera.se</p>
-            <p>Telefon: 070-123 45 67</p>
-            </section>
-
-    </div>
-
-    <footer>
-        <p>&copy; 2025 EventPlanera AB. Alla rättigheter reserverade.</p>
-    </footer>
-
-</body>
-</html>
+            <div class="service-grid">
+                <div class="service-card">
+                    <h3>Bröllopsplanering 💍</h3>
+                    <p>Skapa ert drömbröllop utan stress. Vi hanterar logistik, leverantörer och tidslinjer.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Företagsevent och konferenser 💡</h3>
+                    <p>Från kick-offs till stora konferenser, vi garanterar ett professionellt och minnesvärt event.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Privata fester & Jubileum 🎉</h3>
